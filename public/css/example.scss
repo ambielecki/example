@@ -1,0 +1,162 @@
+$primary_color: #D9D9D9;
+$primary_text: #000000;
+
+$secondary_color: #2b542c;
+$secondary_text: #ffffff;
+
+$tertiary_color: #68b169;
+
+$quaternary_color: #deedde;
+
+// gradient mixin from https://gist.github.com/garyharan/957284
+@mixin gradient($from, $to) {
+    background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+    background: -moz-linear-gradient(top,  $from, $to);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+}
+
+//veritcal align mixin from http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+@mixin vertical-align($position: relative) {
+    position: $position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* Navbar Colors generated from http://work.smarchal.com/twbscolor/ with additional customization for this site*/
+.navbar-default {
+    background-color: $secondary_color;
+    border-color: $secondary_color;
+}
+.navbar-default .navbar-brand {
+    color: $secondary_text;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: $secondary_text;
+}
+.navbar-default .navbar-text {
+    color: $secondary_text;
+}
+.navbar-default .navbar-nav > li > a {
+    color: $secondary_text;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: $secondary_text;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: $secondary_text;
+    background-color: $tertiary_color;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: $secondary_text;
+    background-color: $tertiary_color;
+}
+.navbar-default .navbar-toggle {
+    border-color: $tertiary_color;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: $tertiary_color;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: $secondary_text;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: $secondary_text;
+}
+.navbar-default .navbar-link {
+    color: $secondary_text;
+}
+.navbar-default .navbar-link:hover {
+    color: $secondary_text;
+}
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus{
+    background-color: $secondary_color;
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: $secondary_text;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: $secondary_text;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: $secondary_text;
+        background-color: $tertiary_color;
+    }
+}
+@media (min-width: 768px){
+    .navbar{
+        border-radius: 0;
+    }
+}
+.dropdown-menu > li > a:hover {
+    background-color: $secondary_color;
+    color: $secondary_text;
+    background-image: none;
+}
+.dropdown-menu > li > a{
+    background-color: $tertiary_color;
+    color: $secondary_text;
+}
+.navbar-default{
+    border-radius: 0;
+    border: none;
+}
+.navbar-default .navbar-nav > li > a:hover{
+    background-color: $tertiary_color;
+    color: $secondary_text;
+}
+.dropdown-menu{
+    padding: 0;
+}
+.dropdown-menu .divider{
+    background-color: $secondary_color;
+    color: $secondary_text;
+    background-image: none;
+    margin: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#site_brand{
+    margin: 0;
+    background-color: $secondary_color;
+    color: $secondary_text;
+}
+
+//navbar
+#nav_container{
+    padding: 0;
+}
+
+/* Code from http://mystrd.at/modern-clean-css-sticky-footer/ for footer*/
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    font-family: 'Droid Sans', 'Lato', sans-serif;
+    margin-bottom: 50px; /* bottom = footer height */
+    background-color: $quaternary_color;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: $secondary_color;
+    color: $secondary_text;
+}
+footer a, footer a:hover{
+    color:white;
+}
+#footer_div{
+    @include vertical-align();
+}
+
+.jumbotron h1 a{
+    color:$secondary_text;
+}

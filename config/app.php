@@ -155,7 +155,8 @@ return [
         Example\Providers\AuthServiceProvider::class,
         Example\Providers\EventServiceProvider::class,
         Example\Providers\RouteServiceProvider::class,
-
+        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
     ],
 
     /*
