@@ -1,27 +1,51 @@
-# Laravel PHP Framework
+# Andrew's Quick Site
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## Description
+A quick Bootstrap based boilerplate for getting a basic site running
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Outside code
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+*   Laravel
 
-## Official Documentation
+    [Laravel Homepage](http://laravel.com/)
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+*   Bootstrap
 
-## Contributing
+    [Getbootstrap](http://getbootstrap.com/)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+*   Bootstrap Buttons
 
-## Security Vulnerabilities
+    [Social Buttons for Bootstrap](http://lipis.github.io/bootstrap-social/)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+*   Font Awesome (to use Bootstrap buttons and some other icons)
 
-## License
+    [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+*   Used the footer css linked in class
+
+    [Modern Clean CSS "Sticky footer"](http://mystrd.at/modern-clean-css-sticky-footer/)
+
+*   TWBSColor - Generate Bootstap Navbar Color Scheme
+
+    [TWBSColor](http://work.smarchal.com/twbscolor/index.php)
+
+*   jQuery
+
+    [jQuery](https://jquery.com/)
+
+*   thephpleague/csv - for importing Excel CSV tables with thanks to Rebekah Heacock Jones on Piazza 502 for help
+    on where to store the csv and the path
+
+    [thephpleague/csv](https://github.com/thephpleague/csv)
+
+*   faker - generated some of my data (email addresses, phone numbers)
+
+    [fzaninotto/Faker](https://github.com/fzaninotto/Faker)
+
+*   Barryvdh Larave IDE Helper
+
+    [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)
+    
+*   Laravel Logs
+
+    [rap2hpoutre/laravel-log-viewer](https://github.com/rap2hpoutre/laravel-log-viewer)
