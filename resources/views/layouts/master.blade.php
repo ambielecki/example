@@ -12,8 +12,8 @@
 </head>
 
 <body>
-{{-- Flash Message Code
-<div class="container">
+{{-- Flash Message Code --}}
+<div class="container-fluid">
     @if(\Session::has('flash_message'))
         <div class="row flashmessage">
             <div class="col-sm-12">
@@ -22,7 +22,7 @@
         </div><br>
     @endif
 </div>
---}}
+
 
 {{-- Bootstrap header and nav --}}
 
@@ -59,6 +59,9 @@
                             <li><a href="#">Separated Dropdown</a></li>
                         </ul>
                     </li>
+                    <li><a href="/live">Live Link</a></li>
+                    <li><a href="/data">Data Page</a></li>
+                    <li><a href="/form">Form Page</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">

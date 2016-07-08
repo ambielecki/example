@@ -18,3 +18,10 @@ Route::get('/', function () {
 if(App::environment('local')) {
     Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 }
+
+Route::get('/live', 'ExampleController@getLive');
+
+Route::get('/data', 'ExampleController@getData');
+
+Route::get('/form', 'ExampleController@getForm');
+Route::post('/form', 'ExampleController@postForm');

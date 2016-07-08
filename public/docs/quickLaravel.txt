@@ -1,0 +1,94 @@
+cd /xampp/htdocs
+  composer create-project laravel/laravel (projectName) --prefer-dist
+cd projectName
+  php artisan app:name (ProjectName)
+  php artisan key:generate
+  git init
+
+Create a new github repo
+
+Back in /xampp/htdocs/projectName
+  git remote add origin (git repo)
+  git add –all
+  git commit -m”First commit”
+  git push origin master
+
+composer require rap2hpoutre/laravel-log-viewer
+To providers in config/app.php
+  Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+  Add a route (if using auth, add in auth group, otherwise wrap in a local env)
+    Route::get(‘logs’,’\Rap2hpoutre\LaravelLogViewer\LogViewerController@index’);
+
+Command Line
+
+composer require barryvdh/laravel-ide-helper
+To providers in config/app.php
+  Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
+Back to command line /xampp/htdocs/projectName
+  php artisan ide-helper:generate
+
+For models
+composer require doctrine/dbal
+  php artisan ide-helper:model (Model)
+
+Add new host to c:/windows/system32/drivers/etc/hosts
+
+Add new vhost to c:/xampp/apache/conf/extra/httpd-vhosts.conf
+
+Useful composer commands
+
+Make a new controller
+  php artisan make:controller PhotoController
+
+Make a new Model with migration
+  php artisan make:model User --migration
+
+Make a new migration
+  php artisan make:migration …
+
+Make a new seed
+  php artisan make:seeder UserTableSeeder
+
+Migrate
+  php artisan migrate
+
+Migrate and seed
+  php artisan migrate --seed
+
+Refresh, migrate and seed
+  php artisan migarte:refresh --seed
+
+Seed one file
+  php artisan db:seed --class=UsersTableSeeder
+
+Create auth
+  php artisan make:auth
+
+composer dump-autoload
+php artisan optimize
+
+Example .env
+
+APP_ENV=local
+APP_DEBUG=true
+APP_KEY=randomstring
+
+DB_HOST=localhost
+DB_DATABASE=dbname
+DB_USERNAME=root
+DB_PASSWORD=
+
+CACHE_DRIVER=file
+SESSION_DRIVER=file
+QUEUE_DRIVER=sync
+
+MAIL_DRIVER=smtp
+MAIL_HOST=mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=d7c8ebdda4e92a
+MAIL_PASSWORD=354dbb335faf4b
+MAIL_ENCRYPTION=null
+
+Create SCSS file watcher
+  go to file->Settings->Tools->File Watchers and click the +
