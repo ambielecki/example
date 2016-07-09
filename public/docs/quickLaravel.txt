@@ -62,6 +62,9 @@ Refresh, migrate and seed
 Seed one file
   php artisan db:seed --class=UsersTableSeeder
 
+Custom Request Validation
+    php artisan make:request StoreBlogPostRequest
+
 Create auth
   php artisan make:auth
 
