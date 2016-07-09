@@ -25,3 +25,6 @@ Route::get('/data', 'ExampleController@getData');
 
 Route::get('/form', 'ExampleController@getForm');
 Route::post('/form', 'ExampleController@postForm');
+
+Route::get('/editdata/{id?}', 'ExampleController@getEditData');
+Route::post('/editdata', 'ExampleController@postEditData');

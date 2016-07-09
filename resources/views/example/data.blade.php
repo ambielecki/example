@@ -32,6 +32,11 @@
                 </table>
             </div>
         </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <a href="/editdata">Edit a player</a>
+            </div>
+        </div>
     </div>
 @stop
 

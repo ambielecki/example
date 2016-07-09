@@ -25,7 +25,8 @@ class AddExampleRequest extends Request
     {
         return [
             'column1' => 'required',
-            'column2' => 'required|numeric|integer'
+            'column2' => 'required|numeric|integer',
+            'id' => 'numeric|integer|min:1'
         ];
     }
     public function messages()

@@ -3,9 +3,6 @@
 namespace Example\Http\Controllers;
 
 use Example\Example;
-use Illuminate\Http\Request;
-
-use Example\Http\Requests;
 use Example\Http\Requests\AddExampleRequest;
 
 
@@ -18,7 +15,7 @@ class ExampleController extends Controller
     
     public function getData()
     {
-        $data = \Example\Example::get();
+        $data = Example::get();
         return view('example.data', ['data'=>$data]);
     }
     
@@ -33,5 +30,31 @@ class ExampleController extends Controller
         Example::addExample($request);
         \Session::flash('flash_message','Player Added');
         return redirect('/form');
+    }
+    
+    public function getEditData($id = null)
+    {
+        if($id)
+        {
+            $player = Example::find($id);
+            return view('example.edit', ['player'=>$player]);
+        }else
+        {   
+            $players = Example::all();
+            return view('example.edit', ['players'=>$players]);
+        }
+    }
+    
+    public function postEditData(AddExampleRequest $request)
+    {
+        $status = Example::editExample($request);
+        if($status)
+        {
+            \Session::flash('flash_message','Player Edited');
+            return redirect('/data');
+        }else{
+            \Session::flash('flash_message','There was a problem with your request, please try again');
+            return redirect('/editdata');
+        }
     }
 }
