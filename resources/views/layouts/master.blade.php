@@ -6,27 +6,26 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta lang="en">
     {{--<link rel='icon' href='/images/favicon.ico'>--}}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/f3941c2d61.js"></script>
     <link rel="stylesheet" href="/css/example.css">
+    {{-- For page specific css --}}
     @yield('head')
 </head>
 
 <body>
 {{-- Flash Message Code --}}
-<div class="container-fluid">
-    @if(\Session::has('flash_message'))
+@if(\Session::has('flash_message'))
+    <div class="container-fluid">
         <div class="row flashmessage">
             <div class="col-sm-12">
                 {{\Session::get('flash_message')}}
             </div>
         </div><br>
-    @endif
-</div>
+    </div>
+@endif
 
-
-{{-- Bootstrap header and nav --}}
-
+{{-- Bootstrap Jumbotron and nav --}}
 <div class="jumbotron" id="site_brand">
     <div class="container">
         <h1><a href="/">Example Title</a></h1>
@@ -73,7 +72,6 @@
         </div>{{-- /.container-fluid --}}
     </nav>
 </div>
-{{-- create the news feed this will be persistent across all pages--}}
 
 {{-- Content --}}
 @yield('content')
@@ -85,15 +83,15 @@
             &copy; <?php echo(date('Y')); ?> Andrew Bielecki
         </div>
         <div class="col-sm-2 col-sm-offset-3 text-center">
-            <a href="https://github.com/ambielecki/biking">View Project on Github <i class="fa fa-github"></i></a>
+            <a href="#">View Project on Github <i class="fa fa-github"></i></a>
         </div>
     </div>
 </footer>
 
 {{-- Load jquery and bootstrap js --}}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+{{-- page specific js --}}
 @yield('body')
 
 </body>

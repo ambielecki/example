@@ -155,6 +155,7 @@ footer a, footer a:hover{
 }
 #footer_div{
     @include vertical-align();
+    padding: 0;
 }
 
 .jumbotron h1 a{
